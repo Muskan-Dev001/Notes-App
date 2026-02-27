@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:active {
+  transform: scale(0.8);
+}
+body {
+  position: relative;
+  height: 100vh;
+  padding: 20px;
+  background-color: #fff5e08a;
+}
+
+.notesForm {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.notesForm h1{
+  text-align: center;
+}
+
+#notesHeading,
+#notesDetails {
+  padding: 10px;
+  outline: none;
+  border: 2px solid black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.05rem;
+  color: black;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+#notesHeading {
+  height: 10%;
+}
+
+#notesDetails {
+  height: 40%;
+}
+
+.addNote {
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: rgb(49, 179, 99);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 3px 2px 0 black;
+}
+
+.yourNotesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 95vh;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.715);
+  border-radius: 12px;
+}
+
+.yourNotesContainer .heading {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 2.25rem;
+  font-family: cursive;
+  text-shadow: 0px 2px 3px #000000c9;
+}
+
+.yourNotesContainer .notesContainer {
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.yourNotesContainer .cardBody {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: 190px;
+  height: 190px;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0px 2px 3px 0 black;
+}
+
+.yourNotesContainer .cardBody .deleteBtn {
+  position: absolute;
+  align-self: flex-end;
+  bottom: 10px;
+  outline: none;
+  background-color: crimson;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+@media (min-width: 930px) {
+  .MainBody {
+    display: flex;
+  }
+
+  .notesForm {
+    width: 40%;
+  }
+  .yourNotesContainer {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .yourNotesContainer .notesContainer {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .notesForm {
+    padding: 20px;
+    gap: 10px;
+  }
+}
+
+@media (max-width:930px) {
+  .yourNotesContainer{
+    height: 55vh;
+  }
+}
